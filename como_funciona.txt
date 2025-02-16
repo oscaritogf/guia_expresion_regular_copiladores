@@ -1,0 +1,19 @@
+
+Explicación del Código
+
+1 . Validación de Fechas :
+    Se utiliza una expresión regular para validar formatos cortos (YY-MM-DD) y largos (día, DD de MM de YYYY).
+    Los resultados se almacenan en una lista de tuplas (fecha, resultado).
+2. Reemplazo de Palabras :
+    La función reemplazar_palabra utiliza \b para asegurarse de que solo se reemplacen palabras completas.
+    El texto modificado se guarda en un DataFrame.
+3. Extracción de Archivos :
+    Se utiliza os.listdir junto con una expresión regular para filtrar archivos por extensión.
+    Si la ruta no existe, se maneja la excepción.
+4. Validación de Usuarios :
+    Se valida que el nombre de usuario tenga entre 8 y 12 caracteres y solo contenga letras, números, guiones bajos o guiones altos.
+5. Validación de Contraseñas :
+    Se verifica que la contraseña cumpla con los criterios de seguridad: longitud mínima, mayúsculas, minúsculas, números y caracteres especiales.
+
+    Exportación a Excel :
+Se utiliza pandas para crear un archivo Excel con hojas separadas para cada prueba.
