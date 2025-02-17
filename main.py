@@ -60,7 +60,7 @@ def main():
     nueva_palabra = "caballo"
     
     ruta = "."  # Ruta actual del script
-    extension = "txt"
+    extension = "py"
     
     
     usuarios = ["Luis_Carlos4", "usuario_invalido!", "Ana_123"]
@@ -73,6 +73,18 @@ def main():
     archivos_extraidos = extraer_archivos(ruta, extension)
     resultados_usuarios = [(usuario, validar_nombre_usuario(usuario)) for usuario in usuarios]
     resultados_contraseñas = [(contraseña, validar_contraseña(contraseña)) for contraseña in contraseñas]
+
+    # Mostrar resultados en consola
+    print("Resultados de validación de fechas:")
+    print(resultados_fechas)
+    print("\nTexto modificado:")
+    print(texto_modificado)
+    print("\nArchivos extraídos:")
+    print(archivos_extraidos)
+    print("\nResultados de validación de usuarios:")
+    print(resultados_usuarios)
+    print("\nResultados de validación de contraseñas:")
+    print(resultados_contraseñas)
 
     # Crear DataFrame para exportar a Excel
     df_fechas = pd.DataFrame(resultados_fechas, columns=["Fecha", "Resultado"])
